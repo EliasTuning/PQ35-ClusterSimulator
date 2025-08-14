@@ -47,13 +47,13 @@ class MessageFactory:
         message_names = [
             #"Lenkhilfe_1",
             # "BSG_Kombi",  # Commented out as in original
-            #"Motor_5",
+            "Motor_5",
             #"Motor_1",
             #"Bremse_2",
             #"Bremse_1",
             #"Airbag_1",
             #"Getriebe_2",
-            "Motor_2",
+            #"Motor_2",
         ]
 
         generators = {}
