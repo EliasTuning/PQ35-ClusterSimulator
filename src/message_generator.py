@@ -52,10 +52,10 @@ class MessageGenerator:
 	def generate_Motor5(self):
 		message = self.get_message('Motor_5')
 		data = message.encode({
-			'Multiplex_Info_norm__Verbrauch': 0,
+			#'Multiplex_Info_norm__Verbrauch': 0,
 			'Multiplex_Info_Motortyp': 20,
-			'Multiplex_Info_Drehzahl_MD_Max': 0,
-			'Multiplex_Info_Max_Drehmoment': 0,
+			#'Multiplex_Info_Drehzahl_MD_Max': 0,
+			#'Multiplex_Info_Max_Drehmoment': 0,
 			'Multiplex_Code': 2,
 			'Ladekontroll_Lampe': 0,
 			'Vorgluehlampe__Motor_5_': 0,
@@ -101,7 +101,7 @@ class MessageGenerator:
 	def generate_Bremse2(self):
 		message = self.get_message('Bremse_2')
 		data = message.encode({
-			'Timer': 0,
+			#'Timer': 0,
 			'Querbeschleunigung': 0.010000000000000009,
 			'Querbeschl__TimerTic': 0,
 			'mittlere_Raddrehzahl__Bremse_2': 0.0,
@@ -183,9 +183,9 @@ class MessageGenerator:
 			'Zwischengasflag': 0,
 			'Zahler_Getriebe_2': 9,
 			'Leerlaufsolldrehzahl__Getriebe': 0,
-			'Gradientenbegrenzung': 2550,
+			'Gradientenbegrenzung': 2540,
 			'Synchronisations_Wunschdrehzahl': 0,
-			'invertierte_Synchronisations_Wu': 6375,
+			'invertierte_Synchronisations_Wu': 6350,
 			'Synchronisationszeit': 0,
 			'Hochschaltlampe': 0,
 			'Starter_wird_angesteuert': 1,
@@ -203,10 +203,10 @@ class MessageGenerator:
 	def generate_Motor2(self):
 		message = self.get_message('Motor_2')
 		data = message.encode({
-			'Multiplex_Info_Motorcode__4_x_': 0,
+			#'Multiplex_Info_Motorcode__4_x_': 0,
 			'Multiplex_Info_Getriebecode': 10,
-			'Multiplex_Info_Max_Moment__Norm': 0,
-			'Multiplex_Info_CAN_Stand': 0,
+			#'Multiplex_Info_Max_Moment__Norm': 0,
+			#'Multiplex_Info_CAN_Stand': 0,
 			'Multiplex_Code_Motor_2': 2,
 			'Kuehlmitteltemperatur__Motor_2_': 87.0,
 			'Bremslichtschalter': 0,
