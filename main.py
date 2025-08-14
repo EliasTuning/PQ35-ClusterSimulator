@@ -22,6 +22,8 @@ def main():
         timing_ms = message_timing.get_timing(message_name)
         timing_sec = timing_ms / 1000
 
+        timing_sec  = 1
+
         scheduler.add_job(
             sender.send,
             trigger='interval',

@@ -41,43 +41,31 @@ class Motor2(BaseMessage):
             'Begrenzungsmoment': 60.45,
             'Minimales_Motormoment_bei_Zuend': 3.5100000000000002,
         }
-        
+
+        message_data.update({
+            'Multiplex_Code_Motor_2': self.multiplex_counter,
+        })
         # Add multiplex-specific fields based on counter
+        print(self.multiplex_counter)
         if self.multiplex_counter == 0:
-            # CANVERS & 0x3f
             message_data.update({
-                'Multiplex_Info_Motorcode__4_x_': 0,  # CANVERS value
-                'Multiplex_Code_Motor_2': 0,
+                'Multiplex_Info_CAN_Stand': 0,
             })
         elif self.multiplex_counter == 1:
-            # FMOTC & 0x3f
             message_data.update({
-                'Multiplex_Info_Max_Moment__Norm': 0,  # FMOTC value
-                'Multiplex_Code_Motor_2': 1,
+                'Multiplex_Info_Motorcode__4_x_': 0,  # CANVERS value
             })
         elif self.multiplex_counter == 2:
             # CWGC_0_A[vkGeArt1] & 0x3f
             message_data.update({
                 'Multiplex_Info_Getriebecode': 10,  # CWGC value
-                'Multiplex_Code_Motor_2': 2,
             })
         elif self.multiplex_counter == 3:
-            # MDNORM (with potential right shift)
-            mdnorm = 3  # MDNORM value would be set here
-            b_cdma = 0  # B_cdma value would be set here
-            if b_cdma != 0:
-                mdnorm = mdnorm >> 1
-            multiplex_info = mdnorm & 0x3f
             message_data.update({
-                'Multiplex_Info_CAN_Stand': multiplex_info,
-                'Multiplex_Code_Motor_2': 3,
+                'Multiplex_Info_Max_Moment__Norm': 0,  # FMOTC value
             })
-        else:
-            # Fallback
-            message_data.update({
-                'Multiplex_Info_Motorcode__4_x_': 0,
-                'Multiplex_Code_Motor_2': 0,
-            })
+
+
         
         message = self.get_message('Motor_2')
         data = message.encode(message_data)
