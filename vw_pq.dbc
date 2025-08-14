@@ -1695,3 +1695,13 @@ VAL_ 1472 EP1_Warnton 0 "Warnton_aus" 1 "Warnton_an";
 VAL_ 1472 EP1_Fehler_BKL 0 "BKL_aus" 1 "BKL_an";
 VAL_ 1472 EP1_Fehler_gelb 0 "Lampe_aus" 1 "Lampe_ein";
 VAL_ 1472 EP1__Text 0 "kein_Text" 1 "Text_1" 2 "Text_2" 3 "Text_3" 4 "Text_4" 5 "Text_5" 6 "reserviert" 7 "reserviert" 8 "Text_8";
+
+
+BO_ 1024 mLicht_1_alt: 8 Vector__XXX
+ SG_ LIA_Abblendlicht     : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Fernlicht        : 2|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Nebellicht       : 3|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Nebelschluss     : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Blk_L_Kontrolle  : 16|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Blk_R_Kontrolle  : 17|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LIA_Kurv_Licht       : 18|1@1+ (1,0) [0|1] ""  Vector__XXX

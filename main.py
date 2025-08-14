@@ -6,7 +6,7 @@ import time
 from pprint import pprint
 
 from src.can_sender import CanSender
-from src.message_generator import MessageGenerator
+from src.messages.message_factory import MessageFactory
 from apscheduler.schedulers.background import BackgroundScheduler
 
 from src.timing import MessageTiming
@@ -16,7 +16,7 @@ def main():
     # Create APScheduler background scheduler
     scheduler = BackgroundScheduler()
     sender = CanSender()
-    generator = MessageGenerator()
+    generator = MessageFactory()
     message_timing = MessageTiming()
     for message_name, message_func in generator.getMessages().items():
         timing_ms = message_timing.get_timing(message_name)
