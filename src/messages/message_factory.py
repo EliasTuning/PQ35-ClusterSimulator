@@ -40,25 +40,25 @@ class MessageFactory:
             raise ValueError(f"Unknown message name: {message_name}")
         
         return message_classes[message_name](self.dbc_path)
-    
+
     def getMessages(self):
         """Return a dictionary mapping message names to their generate functions.
         This maintains compatibility with the old MessageGenerator interface."""
         message_names = [
-            "Lenkhilfe_1",
+            #"Lenkhilfe_1",
             # "BSG_Kombi",  # Commented out as in original
-            "Motor_5",
-            "Motor_1",
-            "Bremse_2",
-            "Bremse_1",
-            "Airbag_1",
-            "Getriebe_2",
+            #"Motor_5",
+            #"Motor_1",
+            #"Bremse_2",
+            #"Bremse_1",
+            #"Airbag_1",
+            #"Getriebe_2",
             "Motor_2",
         ]
-        
+
         generators = {}
         for name in message_names:
             instance = self.get_message_instance(name)
             generators[name] = instance.generate
-        
+
         return generators
