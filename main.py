@@ -2,6 +2,8 @@
 
 # Press Alt+Umschalt+X to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from pprint import pprint
+
 from src.message_generator import MessageGenerator
 
 
@@ -21,7 +23,7 @@ def main():
 	]
 	for create_message in generators:
 		message = create_message()
-		print(message)
+		print(message.name,message.signals)
 
 
 # Press the green button in the gutter to run the script.
